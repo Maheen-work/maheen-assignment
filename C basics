@@ -1,0 +1,66 @@
+# C Basics
+
+## 1. Data Types
+
+| Data Type | Description |
+|-----------|-------------|
+| `int` | Used to store whole numbers (positive or negative), without decimals. Typically occupies 4 bytes. |
+| `float` | Used to store single-precision floating-point numbers (decimal values). Typically occupies 4 bytes, accurate up to ~6-7 decimal digits. |
+| `double` | Used to store double-precision floating-point numbers, offering greater precision than `float`. Typically occupies 8 bytes, accurate up to ~15-16 decimal digits. |
+| `char` | Used to store a single character (letter, digit, or symbol). Typically occupies 1 byte, stored internally as an ASCII value. |
+| `bool` | Used to store logical values: `true` or `false`. Requires `#include <stdbool.h>` in C. Typically occupies 1 byte. |
+| `void` | Represents the absence of a type. Commonly used for functions that don't return a value, or for generic pointers. |
+
+## 2. Format Specifiers
+
+| Specifier | Description |
+|-----------|-------------|
+| `%d` | Prints a signed decimal integer |
+| `%u` | Prints an unsigned decimal integer |
+| `%o` | Prints an integer in octal (base 8) format |
+| `%x` | Prints an integer in hexadecimal (base 16), lowercase letters |
+| `%X` | Prints an integer in hexadecimal (base 16), uppercase letters |
+| `%f` | Prints a floating-point number in decimal notation |
+| `%e` | Prints a floating-point number in scientific (exponential) notation |
+| `%c` | Prints a single character |
+| `%s` | Prints a string |
+| `%ld` | Prints a signed long integer |
+
+## 3. Input/Output Functions
+
+- **`scanf()`** — Reads formatted input from the user (keyboard) and stores it into variables, using format specifiers to determine the type of data expected. Example: `scanf("%d", &age);`
+
+- **`printf()`** — Prints formatted output to the console, using format specifiers to control how each value is displayed. Example: `printf("Age: %d", age);`
+
+- **`getchar()`** — Reads a single character from standard input and returns it. Commonly used for simple character-based input. Example: `char ch = getchar();`
+
+- **`putchar()`** — Writes a single character to standard output. Example: `putchar(ch);`
+
+- **`fgets()`** — Reads a line of text (including spaces) from input into a string, up to a specified number of characters or until a newline is found. Safer than `gets()` since it prevents buffer overflow. Example: `fgets(name, sizeof(name), stdin);`
+
+- **`puts()`** — Writes a string to standard output followed by a newline character. Example: `puts("Hello, World!");`
+
+## 4. Escape Sequences
+
+| Escape Sequence | Description | Example |
+|------------------|-------------|---------|
+| `\n` | Newline — moves cursor to the next line | `printf("Hello\nWorld");` |
+| `\t` | Horizontal tab — inserts a tab space | `printf("Name:\tMaheen");` |
+| `\\` | Backslash — prints a literal backslash | `printf("C:\\Users");` |
+| `\"` | Double quote — prints a literal double quote | `printf("She said \"Hi\"");` |
+| `\'` | Single quote — prints a literal single quote | `printf("It\'s here");` |
+
+## 5. Precision
+
+Precision for floating-point output is specified using a **period (`.`) followed by a number** placed between the `%` and the format specifier (e.g. `%f`, `%e`). It controls how many digits appear after the decimal point.
+
+**Syntax:** `%.<number>f`
+
+**Example:**
+```c
+float value = 3.14159265;
+printf("%.2f\n", value);   // Output: 3.14
+printf("%.4f\n", value);   // Output: 3.1416
+```
+
+If no precision is specified, `%f` defaults to **6 digits** after the decimal point.
