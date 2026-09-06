@@ -39,3 +39,6 @@ variable using something like `printf("%d", i);` at each iteration.
   - Print a number pattern using nested `for` loops
   - Submit lab report on Google Classroom
   - Get code reviewed by lab instructor
+
+
+ 
