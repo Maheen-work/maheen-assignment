@@ -1,1 +1,45 @@
+# Problem.md — Pseudocode
 
+## Problem 1: Display student information using different data types
+START
+DECLARE name AS STRING
+DECLARE rollNumber AS INTEGER
+DECLARE cgpa AS FLOAT
+DECLARE grade AS CHARACTER
+INPUT name
+INPUT rollNumber
+INPUT cgpa
+INPUT grade
+
+DISPLAY "Name: ", name
+DISPLAY "Roll Number: ", rollNumber
+DISPLAY "CGPA: ", cgpa
+DISPLAY "Grade: ", grade
+END
+
+## Problem 2: Read and display a character using getchar() and putchar()
+
+
+sTART
+DECLARE ch AS CHARACTER
+
+DISPLAY "Enter a character: "
+ch = getchar()
+
+DISPLAY "You entered: "
+putchar(ch)
+
+END
+
+
+## Problem 3: Display a floating-point value using different precision settings
+
+START
+DECLARE value AS FLOAT
+INPUT value
+
+DISPLAY value WITH 1 DECIMAL PLACE
+DISPLAY value WITH 2 DECIMAL PLACES
+DISPLAY value WITH 4 DECIMAL PLACES
+
+END
