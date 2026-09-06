@@ -7,7 +7,7 @@ DECLARE rollNumber AS INTEGER
 DECLARE cgpa AS FLOAT
 DECLARE grade AS CHARACTER
 INPUT name
-INPUT rollNumber
+INPUT rollNumber.
 INPUT cgpa
 INPUT grade
 
