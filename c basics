@@ -1,0 +1,37 @@
+#C Programming Lab Notes
+##1. Data Types
+Data Type	Description
+int	Stores whole numbers (positive, negative, or zero). Typically 4 bytes on most systems.
+float	Stores single-precision floating-point (decimal) numbers. Typically 4 bytes, ~6-7 significant digits.
+double	Stores double-precision floating-point numbers. Typically 8 bytes, ~15-16 significant digits — more accurate than float.
+char	Stores a single character (letter, digit, symbol) or small integer. Typically 1 byte.
+bool	Stores a boolean value: true (1) or false (0). Requires <stdbool.h> in C.
+void	Represents "no value" or "no type". Used for functions that return nothing, or generic pointers (void*).
+##2. Format Specifiers
+Specifier	Meaning
+%d	Signed decimal integer
+%u	Unsigned decimal integer
+%f	Decimal floating-point (e.g., 3.141593)
+%c	Single character
+%s	String of characters
+%ld	Signed long integer
+
+##3. Input/Output Functions
+scanf() — Reads formatted input from the keyboard (stdin) based on format specifiers. Example: scanf("%d", &num); reads an integer into num. Requires the & (address-of) operator for most variables.
+printf() — Writes formatted output to the screen (stdout) based on format specifiers. Example: printf("Value: %d\n", num); prints the value of num.
+
+##4. Escape Sequences
+Escape Sequence	Meaning	Example
+\n	Newline	printf("Hi\n"); moves to next line after "Hi"
+\t	Horizontal tab	printf("A\tB"); prints "A B"
+
+##5. Precision for Floating-Point Output
+
+Precision controls how many digits appear after the decimal point when printing floating-point values with %f or %e. It's specified by placing a period followed by a number between the % and the conversion character:
+
+c
+printf("%.2f", 3.14159);   
+printf("%.4f", 3.14159);     
+The number after the . sets how many digits follow the decimal point (default is 6 if not specified).
+The value is automatically rounded to fit the given precision.
+Precision can be combined with field width, e.g. %10.2f reserves 10 total characters with 2 decimal places.
